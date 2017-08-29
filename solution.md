@@ -61,4 +61,4 @@ egrep -R '((Joe Germuska)|(Brian Boyer)|(Mike Bostock)|(Jeremy Bowers)|(John Kee
 # Not BB, wrong car manufacturer
 # JB, it is JB
 ```
-I first use the instructions. I then searched through the streets. I checked for many different interviews, but it wasn't getting me anywhere at first. Then I use some of the hints. Vehichle number was the next thing I begin to search. The license plate that I was looking for match with Katie Park's. Then from there I went through the membership and the manufactures of their cars. None of them match except for Jeremy Bowers. I believe Jeremy Bowers is the culprit.
+I first use the instructions. I then searched through the streets. I checked for many different interviews, but it wasn't getting me anywhere at first. Then I use some of the hints. The vehichle numbers was the next thing to search for. The license plate that I was looking for match with Katie Park's. Then from there I went through the membership and the manufactures of their cars. None of them match except for Jeremy Bowers. I believe Jeremy Bowers is the culprit.
