@@ -46,3 +46,36 @@ The issue body should have:
 
 -   A 'comfort' score on how you feel about your answers, from 1 (very
     uncomfortable) to 5 (very comfortable)
+
+
+1. Homework submission needs to be at 80% or higher, Attendance must be consistent, and All unit projects need be submitted and presented to the instructional team and should meet project rubric expectations
+
+2.  A) https://www.youtube.com/playlist?list=PLdnONIhPScSToZztXRHyKZTQEsE30luMx
+B) Matt Huntington
+
+3. Javascript the Good Parts
+
+4.The first line should always be 50 characters or less and that it should be followed by a blank line, 
+Add this line to your ~/.vimrc to add spell checking and automatic wrapping at the recommended 72 columns to you commit messages, 
+and Never use the 
+
+5. Copy the error message
+Copy the code in question
+Write a paragraph explaining:
+What you thought the error was
+What the issue turned out to be
+How you solved it
+
+6. A) Atlassian Git Tutorials B) https://git-scm.com/documentation : The reference documentation, book, and videos. C) The Git Cheatsheet 
+
+7. A) Don't use True black. B) Add white space. C) Use fonts, but don't use too many or cursive fonts.
+
+
+8. 3 absences and 6 tardys 
+
+
+9.https://www.producthunt.com/pasta/publicapis
+
+
+10. Labor Day and Veterans Day 
+
