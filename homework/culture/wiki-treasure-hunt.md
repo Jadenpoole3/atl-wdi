@@ -71,7 +71,7 @@ How you solved it
 7. A) Don't use True black. B) Add white space. C) Use fonts, but don't use too many or cursive fonts.
 
 
-8. 3 absences and 6 tardys 
+8. 3 absences and 6 tardys.
 
 
 9.https://www.producthunt.com/pasta/publicapis
@@ -79,3 +79,4 @@ How you solved it
 
 10. Labor Day and Veterans Day 
 
+Git test
