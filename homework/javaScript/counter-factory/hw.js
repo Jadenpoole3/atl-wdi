@@ -49,11 +49,26 @@ const CounterCollection = {
 const Presenter = {
   insertCounterComponent: function(newCountId){
     console.log(`insert counter component #${newCountId}`);
-    // Your Code Here
+   
+    /*<div class='counter' data-index='2'>
+  <h3>Count: <span>0</span></h3>
+  <button class='increment'> + 1 </button>
+</div> */
+
+//Build Presenter thing
+// create element
+ 
+var newElement = doucment.createElement('span');
+newElement.textContent = 'new counter'
+document.body.appendChild(newElement)
+
+
+
+
   },
   refreshCounterComponent: function(countId){
     console.log(`refresh counter component #${countId}`);
-    // Your Code Here
+    l
   },
   removeCounterComponent: function(countId){             // REACH
     console.log(`remove counter component #${countId}`);
