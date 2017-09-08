@@ -68,18 +68,21 @@ document.body.appendChild(newElement)
   },
   refreshCounterComponent: function(countId){
     console.log(`refresh counter component #${countId}`);
-    l
+    let countrCollection = document.getCreateElement('div')
   },
   removeCounterComponent: function(countId){             // REACH
     console.log(`remove counter component #${countId}`);
-    // Your Code Here
+    letCounterComponent = document.getCreateElement('id')
+    
   }
 };
 
 // Top-Level Application Control //
 const AppController = {
   onClickNewCounter: function(event){
-    // Your Code Here
+    // Build Appcontrol
+    
+    
   },
   onClickIncrement: function(event){
     // Your Code Here
