@@ -68,7 +68,7 @@ document.body.appendChild(newElement)
   },
   refreshCounterComponent: function(countId){
     console.log(`refresh counter component #${countId}`);
-    l
+    let newCounterComponent = 
   },
   removeCounterComponent: function(countId){             // REACH
     console.log(`remove counter component #${countId}`);
