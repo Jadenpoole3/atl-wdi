@@ -18,52 +18,165 @@ const Stopwatch = {
   laps: [],
   // DO NOT EDIT ABOVE THIS LINE
   advanceTenMillisecs: function(){
-    // Your Code Here
-  },
+   
+    
+
+      /* if($(this).attr('id') == 'nextLink'){
+        newIndex = activeItemIndex + 1;
+      } else {
+          newIndex = activeItemIndex - 1;
+      }
+      */
+
+      $('advanceTenMillisecs').addFunction();
+        //It increases the number of milliseconds by ten.
+        this.millisecs += 10;
+       // If the number of milliseconds reaches 1000,
+        if('this.millisecs' >= 1000); {
+      //it resets the number of milliseconds to zero.
+        this.millisecs = 0;
+      //it increments the number of seconds.
+       this.millisecs = i++;
+      }
+      //If the number of seconds reaches 60,
+      if('this.seconds' >= 60); {
+
+    //it resets the number of seconds to zero.
+    this.seconds = 0;
+    //it increments the number of minutes.
+    this.mintutes = i++;
+  }
+
+ /* It resets the counts of minutes, seconds, and milliseconds to zero.
+  2.  It resets the list of laps to be empty.*/
+
   reset: function(){
-    // Your Code Here
+   this.minutes = 0;
+   this.seconds = 0;
+   this.millisecs = 0;
+   this.laps = 0;
   },
+
+ /* If the stopwatch is not running,
+  a. it sets the state of the stopwatch to 'running'.
+  b. it calls `tickClock` in order to start the ticking of the clock.
+2.  If the stopwatch is running,
+  a. it does nothing*/
+
+
   start: function(){
-    // Your Code Here
+    if( 'this.stopwatch') {
+     this.stopwatch = running;
+     this.tickClock()
+    }
   },
+
+
   stop: function(){
-    // Your Code Here
+    if('this.stopwatch') {
+      this.stopwatch = notRunning;
+
+    }
   },
   lap: function(){
-    // Your Code Here
+    if('this.stopwatch') {
+
+    }
   }
 };
 
 /// User Interface ///
 const ViewEngine = {
-  updateTimeDisplay: function(mins, secs, millisecs){
-    // Your Code Here
+
+  updateTimeDisplay: function(mins, secs, millisecs) {
+
+     /*It displays the values of minutes, seconds, and (tens of)
+    milliseconds elapsed in the DOM element with id `time-display`, in
+    the format `MM:SS:ss` (e.g. `100:01:34`, `05:01:10`), starting with
+    `00:00:00`.
+2.  It pads the values of minutes, seconds, and (tens of) milliseconds
+    with zeros so that the strings are at least two characters long.
+*/
+    
+    const valueToAdd = newValue[0];
+$(`#time-display`).append(mins, secs, millisecs)
+$newValue.append(`${mins, secs, millisecs}`)
+
+
+
+}
+
+    }
   },
   updateLapListDisplay: function(laps){
-    // Your Code Here
+    /*
+    It displays the recorded laps inside the `lap-list` element,
+    representing each lap with an `<li>` element that displays the
+    lap's `mins`, `secs`, and `millisecs` values (zero-padded to be at
+    least two characters long, just like `time-display`). */
   },
 };
 const ViewHelpers = {
   zeroFill: function(number, length){
-    // Your Code Here
+    
   },
 };
 
 /// Top-Level Application Code ///
 const AppController = {
   handleClockTick: function(){
-    // Your Code Here
+
+   /* If the stopwatch is not running,
+    a.  it starts the stopwatch.
+  2.  If the stopwatch is already running,
+    b.  it does nothing.*/
+
+
+  $(`ViewEngine`).call(`updateTimeDisplay`)
   },
   handleClickStart: function() {
-    // Your Code Here
+    if(`this.stopwatch`) {
+      stopwatch.start();
+    }
   },
+
+
+/*  If the stopwatch is running,
+  a. it stops the stopwatch.
+2.  If the stopwatch is not running,
+  a. it resets the stopwatch.
+  b. it updates the time display so that it shows `00:00:00`.
+  c. it updates the lap list display so that it is empty. */
+  
+  
   handleClickStopReset: function(){
-    // Your Code Here
+    if(`this.stopwatch`) {
+      stopwatch.stop();
+    }
+      else {
+        stopwatch.reset();
+      }
+      updateTimeDisplay(0,0,0,);
+      updateLapListDisplay();
+    
+    }
+
+
+
   },
   handleClickLap: function(){
-    // Your Code Here
-  }
-};
+   /* If the stopwatch is running,
+    a.  it records a lap.
+    b.  it updates the display of laps.
+  2.  If the stopwatch is not running,
+    a.  it does nothing. */
+
+    if(`this.stopwatch`) {
+      stopwatch.laps();
+      updateLapListDisplay(stopwatch.laps);
+    }
+  };
+
 
 window.onload = function(){
   // Attach AppController methods to the DOM as event handlers here.
