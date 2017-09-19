@@ -6,6 +6,7 @@ const hbs = require('hbs');
 
 
 app.set('view engine', 'hbs');
+app.set('views', './views');
 
 app.get('/', (req, res) => {
 res.send('Welcome to Pizza Express');
