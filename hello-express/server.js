@@ -1,29 +1,33 @@
 const express = require('express');
 const app = express();
+const hbs = require('hbs');
 
-/*app.get('/', (req, res) => {
-  res.send("hello wdi12");
+app.set("view engine", "hbs");
+app.use(express.static(__dirname + '/public'));
+
+
+app.get('/greetings', (req, res) => {
+  console.log(req.query);
+
+  res.render("greetings", {
+    data: req.query.saying,
+    name: "Jaden"
+  })
 })
 
-app.get('/greeting', (req, res) => {
-    res.send('Hey, WDI 12!');
-})
+app.get('/favorite-foods', function(req, res) {
+    var favorite = [
+        "Jeni's Almond Butter ice cream", 
+        'Tacos from Superica', 
+        'A Breakfast Sandwich from Gjelina to go in Venice', 
+        'Croissants from Bottega Louie in Downtown Los Angeles', 
+        'Pizza from Little Star in San Francisco'];
 
-app.get('/rihanna', (req, res) => {
-    res.send("Work Work work work");
-}) */
-
-  app.get('/math/:operator', function(req, res) {
-      console.log(req.params)
-      console.log(req.query)
-      num1 = parseInt(req.query.num1)
-      num2 = parseInt(req.query.num2)
-      add = num1 + num2;
-      if(req.params.operator === 'add') {
-          res.send(`${add}`);
-}else if (req.params.operator === 'subtract')
-
+    res.render('favorite-foods', {
+        data: favorite
+    
     });
+});
 
 const PORT = 3000;
 
