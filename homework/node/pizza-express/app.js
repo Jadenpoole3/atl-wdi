@@ -3,25 +3,17 @@ const express = require('express');
 //save an express module as 'app'
 const app = express();
 const hbs = require('hbs');
-
+const controllerTopping = require('./controller/topping.js');
+const controllerOrder = require('./controller/order.js');
+const controllerIndex = require('./controller/index.js')
 
 app.set('view engine', 'hbs');
 app.set('views', './views');
 
-app.get('/', (req, res) => {
-res.send('Welcome to Pizza Express');
-});
+app.get('/topping', controllerTopping);
+app.get('/order', controllerOrder);
+app.get('/index', controllerIndex);
 
-app.get("/topping/:type", (req, res, next) => {
-    const type = req.params.type;
-    res.send(`${type} pizza! Good choice.`)
- })
-
- app.get('/order/:amount/:size', (req, res, next) => {
-    const amount = req.params.amount;
-    const size = req.params.size;
-         res.send(`${amount} ${size} Your order for pizza will be ready in 1 minute ` );
-     });
 
 
 
