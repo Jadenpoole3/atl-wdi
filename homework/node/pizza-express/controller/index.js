@@ -3,8 +3,8 @@ const router = express.Router();
 
 
 
-router.get('/:index', (req, res) => {
-    const index = `${req.params.index} Welcome to Pizza Express`;
+router.get('/', (req, res) => {
+    const index = "Welcome to Pizza Express"
     res.render('index');
     index: index
     });

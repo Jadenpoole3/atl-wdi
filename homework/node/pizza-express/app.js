@@ -12,7 +12,7 @@ app.set('views', './views');
 
 app.get('/topping', controllerTopping);
 app.get('/order', controllerOrder);
-app.get('/index', controllerIndex);
+app.use('/', controllerIndex);
 
 
 
