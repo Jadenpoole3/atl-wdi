@@ -1,6 +1,8 @@
 
 var express     = require('express');
 var hbs         = require('hbs');
+const methodOverride = require('method-override');
+const bodyParser = require("body-parser");
 
 /* app settings*/
 var app         = express();
@@ -9,7 +11,12 @@ var port        = process.env.PORT || 3000;
 
 
 
+app.use(methodOverride('_method'));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
+/*CSS*/
+app.use(express.static(__dirname + '/public')); // VERY IMPORTANT!! Make sure to add a '/'
 
 /*Views*/
 app.set('view engine', 'hbs');

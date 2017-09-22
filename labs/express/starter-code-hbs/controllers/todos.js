@@ -35,6 +35,41 @@ res.render('todos/show', {
 
 })
 
+/* Edit todos */ 
+router.get('/:id/edit',(req, res) => {
+  res.render('todos/edit', {
+    todo: {
+      id: req.params.id,
+      description: data.seededTodos[req.params.id].description,
+      urgent: data.seededTodos[req.params.id].urgent,
+    }
+  });
+});
+
+/* Update todos */
+router.put('/:id', function(req, res) {
+  var todoToEdit = data.seededTodos[req.params.id];
+
+  todoToEdit.description = req.body.description;
+  todoToEdit.urgent = req.body.urgent;
+
+  res.redirect('/todos');
+})
+
+
+
+
+
+/* Delete Todos*/
+router.delete('/:id', function(req, res) {
+  data.seededTodos.splice(req.params.id, 1); // remove the item from the array
+
+  res.redirect('/todos');  // redirect back to the index route
+});
+
+
+
+
 router.post('/', (req,res) => {
   console.log(req.body);
   const newTodo = req.body;
