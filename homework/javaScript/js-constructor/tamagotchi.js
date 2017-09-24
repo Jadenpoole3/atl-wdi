@@ -27,8 +27,15 @@ cry(){
       this.foodInTummy--;
       console.log(`${this.foodInTummy} + WAHHHH!!!!`);
   }
+
+/* Add a method called `yawn`. The `yawn` function should:
+  - reduce the Tamagotchi's `restedness` by 1
+  - console.log the values "[Tamagotchi's name] has current restedness of: [restedness]"
+* Make new Tamagotchis and test the methods work and that they console.log the */
+
   yawn() {
-      
+      this.restedness--;
+      console.log(`${this.name} + has current restedness of  ${this.restedness}`)
   }
 }
 
