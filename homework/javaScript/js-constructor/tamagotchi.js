@@ -37,7 +37,21 @@ cry(){
       this.restedness--;
       console.log(`${this.name} + has current restedness of  ${this.restedness}`)
   }
+  start() {
+    console.log(`start ${this.name}`)
+    this.hungerTime = 6000;
+    this.yawnTimer = 10000;
+    this.sickTimer = 20000;
+
 }
+
+stop() {
+    console.log(`stop ${this.name`)
+}
+
+
+}
+
 
 //create new Tamagotchis
 var constructedObject1 = new Tamagotchi();
