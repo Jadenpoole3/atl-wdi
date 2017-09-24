@@ -7,7 +7,9 @@ console.log('tamagotchi file is loaded');
 Using `this.propertyName = value`, add `foodInTummy`, `restedness`, and `health` as properties and set each of the values to 10. */
 
 class Tamagotchi {
-    constructor() {
+    constructor(name,creatureType) {
+this.name = name;
+this.creatureType = creatureType
 this.foodInTummy = 10;
 this.restedness = 10;
 this.health = 10;
@@ -15,13 +17,26 @@ this.health = 10;
 /* Add in a method called `cry`. 
 The `cry` function should reduce `foodInTummy` by 1, 
 console.log the new value of `foodInTummy`, and console.log "WAHH!!!". */
-cry() {
-    this.foodInTummy -= 1
+
+cry(){
+    this.foodInTummy--;
+    console.log("The Tamagotchi is crying!!! WAAAH!!!!!!");
+    console.log(`${this.name} has ${this.foodInTummy}its in his tummy`);
+  }
+  puke() {
+      this.foodInTummy--;
+      console.log(`${this.foodInTummy} + WAHHHH!!!!`);
+  }
+  yawn() {
+      
+  }
 }
 
-
-}
 //create new Tamagotchis
+var constructedObject1 = new Tamagotchi();
+var constructedObject2 = new Tamagotchi();
 
 
 //test out your Tamagotchies below via console.logs
+console.log(constructedObject1);
+console.log(constructedObject2);
