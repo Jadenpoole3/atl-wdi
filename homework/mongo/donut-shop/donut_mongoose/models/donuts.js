@@ -1,11 +1,17 @@
 //requirements: require mongoose
 const moongoose = require('mongoose');
-
+mongoose.Promise = global.Promise
 //create your donut schema:
-var donutSchema = new Schema({
-    //write your schema fields here
-    
-    });
+const Schema = moongoose.Schema;
+
+      const donutSchema = new Schema({
+        name: String,
+      description: String,
+      img: String,
+      price: Number,
+      qty: Number
+  })
+
     
 
 //export your donut with module.exports()
