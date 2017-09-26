@@ -30,7 +30,27 @@ entities/abstractions (e.g. Senior Paws app, above) that the app might use, and 
 This app provides easy access to all your e-mail service providers in one app. The app will let you select one of your email addresses and view your e-mails for that address.
 
 ```
-Write your answer here or in a separate js file.
+const user = {
+  username: string
+  emailAddresses: emailAddress 
+  password: string
+
+}
+
+const email = {
+  inbox: string,
+  sent: string
+  junk:  string
+
+}
+
+const sender = {
+  email: string
+  content: string
+  emailAddress: string
+}
+
+
 ```
 
 ### 2. Radio on the Internet app
@@ -39,7 +59,21 @@ This app hosts a ton of radio stations, each featuring their own playlists of so
 
 
 ```
-Write your answer here or in a separate js file.
+const app {
+  username: string
+  playlist: string
+  savedStations: string
+  artist: string
+
+}
+
+const station {
+  location: string
+  song: string
+  genre: string
+  title: string
+  numberHost: number
+}
 ```
 
 ### 3. Rock Concert App
@@ -47,20 +81,82 @@ Write your answer here or in a separate js file.
 This app will be a tool for managing all of your favorite bands' concerts; it will keep track of their tour dates, ticket purchasing, and next recommended show.
 
 ```
-Write your answer here or in a separate js file.
+const App {
+  bands: string
+  userName: string
+  password: string
+  shows: number
+}
+
+const tickets {
+  price: number
+  location: string
+  time: number 
+  soldOut: boolean
+}
 ```
 
 ### 4. Coffee To-Go App
 
 This app will allow customers to browse a list of coffeeshops nearby, order drinks off of their menu, add those drinks to a shopping cart, and save that cart as a past order once the purchase is complete.
 
+
+const app {
+  username:  string 
+  password:  string
+
+}
+
+const item {
+  location: string
+  items:  number
+  item:  string
+  avaItems: [items]
+
+}
+
+const cart = {
+  item: string
+  add: string 
+  remove: string
+  price: number 
+  payingWith: string
+}
+
+
 ### 5. Team Tracker App
 
 This app shows you all the latest stats from your favorite sports teams. You can view individual player stats and full team stats.
 
 ```
-Write your answer here or in a separate js file.
-```
+const app {
+  username: string
+  password: string
+}
+
+const favoriteTeam {
+  name: string
+  team: string
+  players: number
+}
+
+const player {
+  name: string
+  points: number
+  stats: number
+  games: number
+
+}
+
+const team {
+  stats: number
+  points: number
+  losses: number 
+  name: string
+  games: number
+  owner: []
+}
+``
 
 
 ### Final Thoughts:
@@ -68,7 +164,7 @@ Write your answer here or in a separate js file.
 Q. When you were creating relationships between the models, what were some thoughts or questions you had to help guide a connection between them?
 
 ```
-Write your answer here or in a separate js file.
+The guide I used to help me was the diagram and the examples. The thoughts I had was if was using this app what are somethings I would like it to have. 
 ```
 
 ### Reading and Videos for Tomorrow
