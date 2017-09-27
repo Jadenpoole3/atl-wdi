@@ -76,7 +76,19 @@ response.redirect('/donuts')
 //======================
 // Create a GET edit route "/:id/edit" that renders the edit.hbs page and
 // sends that donut's data to it
+router.get('/:id/edit', (request, response) => {
+    const donutId = request.params.id
 
+DonutModel.findById(donutId)
+.then((donuts) => {
+response.render('donuts/edit', {
+    donuts: donuts
+})
+})
+.catch((error) => {
+    console.log(error)
+})
+})
 
 
 //======================

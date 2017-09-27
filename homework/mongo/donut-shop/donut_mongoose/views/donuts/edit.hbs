@@ -8,11 +8,30 @@
 
 {{#each donuts}}
 		
+<form action="/donuts/{{donut._id}}?_method=PUT" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="{{donut.name}}">
+
+    <label for="description">Description</label>
+    <input type="number" name="description" value="{{donut.description}}">
+
+	<label for="img">Image</label>
+    <input type="img" name="img" value="{{donut.img}}">
+
+	<label for="price">Price</label>
+    <input type="number" name="price" value="{{donut.price}}">
+
+	<label for="qty">Quantity</label>
+    <input type="number" name="qty" value="{{donut.qty}}">
+
+
+    <button type="submit">Edit {{donut.name}}</button>
+</form>
 
 
 		<div id="img-preview">
 			<img src="{{donut.img}}">
 		</div>
-
+{{/each}}
 	</div>
 </main>

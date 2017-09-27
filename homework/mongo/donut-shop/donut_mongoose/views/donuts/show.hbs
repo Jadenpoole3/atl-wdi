@@ -2,7 +2,7 @@
 
 	<h2>You are viewing:
 
-		<div>Name: {{donuts.name}}</div>
+		<div>Name: {{donut.name}}</div>
 
 	</h2>
 
@@ -11,7 +11,7 @@
 	<div class="donut-container-show">
 		<h2 id="donut-name">
 
-		<div>Name: {{donuts.name}}</div>
+		<div>Name: {{donut.name}}</div>
 
 		</h2>
 
@@ -38,13 +38,13 @@
 
 			<br>
 
-			<a href="/donuts/{{donuts._id}}/edit">Edit</a>
+			<a href="/donuts/{{donut._id}}/edit">Edit</a>
 
 			<<<< BONUS: BUTTON THAT UPDATES THE COUNT >>>>
 
 		</div>
 
-		 <form action="/donuts/{{donuts._id}}?_method=DELETE" method="POST">
+		 <form action="/donuts/{{donut._id}}?_method=DELETE" method="POST">
         <input type="submit" value="Delete">
     </form>
 </main>
