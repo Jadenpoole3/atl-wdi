@@ -103,7 +103,7 @@ router.put('/:id', (request,response) => {
 
 DonutModel.findByIdAndUpdate(donutIdToUpdate, updatedDonut, { new: true})
 .then(() => {
-    response.redirect(`/donuts'${donutIdToUpdate}`)
+    response.redirect(`/donuts/${donutIdToUpdate}`)
 })
 .catch((error) => {
     console.log(error)
@@ -116,6 +116,17 @@ DonutModel.findByIdAndUpdate(donutIdToUpdate, updatedDonut, { new: true})
 //======================
 // Create a DELETE delete route "/:id" that deletes the donut and
 // redirects back to index page "/"
+router.get(':id/delete', (request,response) => {
+    const donutId = request.params.id
+
+DonutModel.findByIdAndRemove(donutId)
+.then((donut) => {
+    response.redirect('/donuts')
+})
+.catch((error) => {
+    console.log(error)
+})
+})
 
 
 
