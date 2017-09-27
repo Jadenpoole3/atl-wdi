@@ -11,7 +11,18 @@ const Schema  = require("../db/donuts.js")
 // INDEX
 //======================
 // Create a GET index route "/" that sends all donuts to index.hbs
+route.get('/', (request,response) => {
+DonutModel.find({})
+.then((donuts) => {
+response.render('/donuts/index', {
+    donuts: donuts
+})
+})
+.catch((error) => {
+    console.log(error)
+})
 
+});
 
 
 //======================
