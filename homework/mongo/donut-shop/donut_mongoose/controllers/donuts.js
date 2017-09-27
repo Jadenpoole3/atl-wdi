@@ -29,7 +29,9 @@ response.render('/donuts/index', {
 // NEW
 //======================
 // Create a GET new route "/new" that renders the new.hbs form
-
+router.get('/new', (request,response) => {
+response.render('/donuts/new')
+})
 
 
 //======================
