@@ -2,7 +2,10 @@
 // REQUIREMENTS
 //======================
 // require express, router, mongoose, Donut schema
-
+const express = require('express')
+const router = express.Router()
+const mongoose = require('mongoose')
+const Schema  = require("../db/donuts.js")
 
 //======================
 // INDEX

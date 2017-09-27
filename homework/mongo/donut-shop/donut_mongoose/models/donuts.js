@@ -1,5 +1,5 @@
 //requirements: require mongoose
-const moongoose = require('mongoose');
+const mongoose = require('mongoose');
 mongoose.Promise = global.Promise
 //create your donut schema:
 const Schema = moongoose.Schema;
@@ -15,3 +15,4 @@ const Schema = moongoose.Schema;
     
 
 //export your donut with module.exports()
+module.exports = router
