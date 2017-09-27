@@ -59,7 +59,16 @@ response.render('donuts/show',  {
 //======================
 // Create a POST index route "/" that creates a new donut
 // and upon success redirects back to the index page "/"
-
+router.post('/', (request,response) => {
+const newDonut = request.body
+DonutModel.create(newDonut)
+.then(() => {
+response.redirect('/donuts')
+})
+.catch((error) => {
+    console.log(error)
+})
+})
 
 
 //======================
