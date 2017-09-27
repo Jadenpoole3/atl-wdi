@@ -36,7 +36,19 @@ response.render('/donuts/index', {
 // SHOW
 //======================
 // Create a GET show route "/:id" that renders the donut's show page
+router.get('/:id', (request,response) => {
+const donutId = request.params.donutId
 
+DonutModel.findById(donutId)
+.then((donuts) => {
+response.render('donuts/show',  {
+    donuts: donuts
+})
+})
+.catch((error) => {
+    console.log(error)
+})
+})
 
 
 
@@ -76,3 +88,4 @@ response.render('/donuts/index', {
 // EXPORTS
 //======================
 // export router with module.exports
+module.exports = router
