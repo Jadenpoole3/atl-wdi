@@ -1,9 +1,10 @@
 import React from 'react';
+import axios from 'axios'
 
 // Update the forms to utilize methods being passed down from App.js
-const Search = () => {
+const Search = (props) => {
   return (
-    <section id="movie-search">
+    <section id="movie-search" >
       <strong>Search by:</strong> Title <em>or</em> ID
 
       <div className="search">

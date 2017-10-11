@@ -1,10 +1,16 @@
 import React from "react";
+import axios from 'axios'
 
 // Update this Movie component with info from OMDB
 // BONUS: Use OMDB's Poster API to add a poster to each movie.
-const Movie = () => {
+
+
+
+
+const Movie = (props) => {
+
   return (
-    <section id="movie-listing">
+    <section id="movie-listing" id="_searchByTitle" id="_searchById">
       <div className="movie">
         <h3>Movie Title</h3>
         <p>
