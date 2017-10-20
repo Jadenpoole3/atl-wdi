@@ -28,9 +28,13 @@ _Hint_: In order to do some parts you will need to research commands we did
 not cover in class.
 
 1.  List the names of all NFL teams
+SELECT name FROM teams;
 2.  List the stadium name and head coach of all NFC teams
+SELECT stadium, head_coach FROM teams;
 3.  List the head coaches of the AFC South
+SELECT head_coach, conference = 'AFC' FROM teams;
 4.  The total number of players in the NFL
+SELECT * FROM players;
 
 <hr>
 &#x1F534; COMMIT 2<br>
@@ -38,7 +42,9 @@ not cover in class.
 <hr>
 
 5.  The team names and head coaches of the NFC North and AFC East
+SELECT head_coach, name FROM teams WHERE conference = 'NFC' AND division ='North'
 6.  The 50 players with the highest salaries
+AND division ='North'
 7.  The average salary of all NFL players
 8.  The names and positions of players with a salary above 10_000_000
 
