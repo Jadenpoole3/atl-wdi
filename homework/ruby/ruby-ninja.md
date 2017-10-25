@@ -18,10 +18,14 @@ If you're not sure about something, be comfortable searching the `Ruby Docs` and
 
 ## Challenge 1: Booleans
 1.  Create a variable `a` and set it equal to `true`
+a = true
 2.  Create a variable `b` and set it equal to `false`
+b = false
 3.  Write a statement using `a` and `b` that evaluates to `false`
+puts a = b
     - puts the result to the terminal
 4.  Write a statement using `a` and `b` that evaluates to `true`
+puts a == b
     - puts the result to the terminal
 5. :dart: Commit -m "1. Boolean Skills"
 
@@ -31,30 +35,54 @@ If you're not sure about something, be comfortable searching the `Ruby Docs` and
     - puts the value of the variable to the terminal concatenate the string "nil was here".
     - print the value of the variable to the terminal
     - puts the class of the value of the variable to the terminal.  Use the .class method.  Look up this method on Google.
+
+    p = nil
+puts "#{p} was here"
+
 2. :dart: Commit -m "2. Nil skills."
 
 ## Challenge 3: Integers
 1.  Create a variable `d` and set it equal to a Fixnum
     -  puts the value of `d`  to the terminal
+    d = 4
+    puts d
 2.  Create a variable `e` and set it equal to a Float
     -  puts the value of `e`  to the terminal
+e = 2.3
+puts e
+
 3.  Set `d` equal to `e` on another line
     -  puts the value of `d` to the terminal
+d == e
+puts d
+
 4. :dart: Commit -m "3. Integers Skills"
 
 ## Challenge 4: Strings
 1.  Create a variable `christine` and set it equal to the string "Hi, I'm Christine"
+christine = "Hi I'm Christine"
+
 2.  Create a variable `likesTo` and set it equal to the String "long walks on the beach, kinda."
+likes_to = "long walks on the beach, kinda."
 3.  Using string interpolation and the variables `tims` and `likesTo` puts the following string to the terminal:
     `"Hi, I'm Christine and I like long walks on the beach, kinda."`
+    puts "#{christine} and I like #{likes_to}"
 4.  Create a variable `g` and set it equal to the string "2"
+g = "2"
 5.  Create a variable `gToNumber` and set it equal to the Integer 2
+gToNumber = 2
 6.  puts the value of `g + gToNumber` in the terminal.  What happens?  How can you fix this?  
+g + gToNumber.to_s
 7. :dart: Commit -m "4. String skills "
 
 
 ## Challenge 5: Input and Output
 -  Create a small program that asks the user to input an Integer and multiplies the number by two.  
+print "Enter your name: "
+name = gets
+print "What do you like to do? "
+likes = gets
+puts "#{name} likes to #{likes}"
 
 -  Create a small program that does the following
     -  Asks the user for their name
